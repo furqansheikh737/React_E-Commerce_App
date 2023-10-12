@@ -4,7 +4,7 @@ import { logoDark } from '../assets'
 
 const Header = () => {
   return (
-    <div className='w-full h-20 bg-white border-b-[1px] border-b-gray-500'>
+    <div className='w-full h-20 bg-white border-b-[1px] border-b-gray-500 sticky top-0 z-50'>
       <div className='max-w-screen-xl h-full mx-auto flex items-center justify-between'>
         <div>
           <img className='w-20' src={logoDark} />
@@ -16,8 +16,8 @@ const Header = () => {
             <li className='text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300'>Shop</li>
             <li className='text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300'>Element</li>
             <li className='text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300'>Blog</li>
-          <span className='text-3xl'><HiOutlineShoppingBag/></span>
-          <span className='text-3xl'><HiOutlineShoppingCart/></span>
+          <li className='text-3xl text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300'><HiOutlineShoppingBag/></li>
+          <li className='text-3xl text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300'><HiOutlineShoppingCart/></li>
           </ul>
         </div>
       </div>

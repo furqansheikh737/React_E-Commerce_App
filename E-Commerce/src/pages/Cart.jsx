@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import { HiOutlineArrowLeft } from "react-icons/hi";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
-// import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
 
 

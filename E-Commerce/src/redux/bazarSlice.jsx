@@ -20,13 +20,13 @@ export const bazarSlice = createSlice({
              state.productData.push(action.payload);
          }
         },
-        deleteItem: (state) => {
+        deleteItem: (state, action) => {
             state.productData = state.productData.filter(
                 (item) => item._id !== action.payload
             );
         },
         resetCart: (state) => {
-            state.productData = []
+            state.productData = [];
         },
         incrementQuantity: (state, action) => {
             const item = state.productData.find(

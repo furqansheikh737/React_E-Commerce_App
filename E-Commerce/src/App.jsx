@@ -4,8 +4,9 @@ import Header from './components/hEADER.JSX'
 import Footer from './components/Footer'
 import Product from './components/Product'
 import { createBrowserRouter, Outlet, RouterProvider, ScrollRestoration } from "react-router-dom";
-import Cart from './components/Cart';
+import Cart from './pages/Cart';
 import { productsData } from './api/Api';
+import Login from './pages/Login'
 
 const Layout = () => {
   return (
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />
+      },
+      {
+        path: "/login",
+        element: <Login />
       }
     ]
   }

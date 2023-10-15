@@ -29,7 +29,7 @@ const Header = () => {
                 </span>
               </div>
             </Link>
-            <li className='text-3xl text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300'><BiLogIn /></li>
+            <Link to="/login"><li className='text-3xl text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300'><BiLogIn /></li></Link>
           </ul>
         </div>
       </div>

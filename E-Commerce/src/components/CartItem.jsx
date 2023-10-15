@@ -1,8 +1,10 @@
 import React from 'react'
 import { MdOutlineClose } from "react-icons/md";
+import { HiOutlineArrowLeft } from "react-icons/hi";
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { ToastContainer, toast } from "react-toastify";
-// import { deleteItem, decrementQuantity, increamentQuantity, resetCart } from "../redux/bazarSlice";
+import { deleteItem, resetCart, decrementQuantity, incrementQuantity } from "../redux/bazarSlice";
 
 const CartItem = () => {
   const dispatch = useDispatch();
@@ -56,7 +58,7 @@ const CartItem = () => {
                   <span
                     onClick={() =>
                       dispatch(
-                        increamentQuantity({
+                        incrementQuantity({
                           _id: item._id,
                           title: item.title,
                           image: item.image,
@@ -85,6 +87,14 @@ const CartItem = () => {
       >
         Reset Cart
       </button>
+      <Link to="/">
+        <button className="mt-8 ml-7 flex items-center gap-1 text-gray-400 hover:text-black duration-300">
+          <span>
+            <HiOutlineArrowLeft />
+          </span>
+          go shopping
+        </button>
+      </Link>
       <ToastContainer
         position="top-left"
         autoClose={3000}

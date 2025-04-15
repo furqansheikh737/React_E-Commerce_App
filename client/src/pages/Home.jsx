@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Banner from '../components/banner'
+import Banner from '../components/Banner'
 import Products from '../components/Products'
 import { useFetcher, useLoaderData } from 'react-router-dom'
 

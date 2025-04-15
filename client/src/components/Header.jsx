@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const productData = useSelector((state) => state.bazar.productData);
+  const userInfo = useSelector((state) => state.bazar.userInfo)
   return (
     <div className="w-full h-20 bg-white border-b border-b-gray-500 sticky top-0 z-50">
       <div className="max-w-screen-xl h-full mx-auto px-4 flex items-center justify-between">
@@ -39,9 +40,14 @@ const Header = () => {
 
           <Link to="/login">
             <li className="text-2xl text-black font-bold hover:text-orange-900 cursor-pointer duration-300">
-              <BiLogIn />
+            <img className='w-8 h-8 rounded-full' src={userInfo ? userInfo.image : "https://images.pexels.com/photos/30333759/pexels-photo-30333759/free-photo-of-thoughtful-woman-in-blue-dragons-hoodie-indoors.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"} alt="userLogo" />
             </li>
           </Link>
+          {userInfo && (
+              <p className='text-base font-titleFont font-semibold underline underline-offset-2'>
+                {userInfo.name}
+              </p>
+            )}
         </ul>
 
         {/* Hamburger Button - Mobile */}
@@ -74,9 +80,14 @@ const Header = () => {
             </Link>
 
             <Link to="/login" className="flex items-center gap-2 text-black font-semibold">
-              <BiLogIn className="text-xl" />
+            <img className='w-8 h-8 rounded-full' src={userInfo ? userInfo.image : "https://images.pexels.com/photos/30333759/pexels-photo-30333759/free-photo-of-thoughtful-woman-in-blue-dragons-hoodie-indoors.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"} alt="userLogo" />
               <span>Login</span>
             </Link>
+            {userInfo && (
+              <p className='text-base font-titleFont font-semibold underline underline-offset-2'>
+                {userInfo.name}
+              </p>
+            )}
           </ul>
         </div>
       )}
